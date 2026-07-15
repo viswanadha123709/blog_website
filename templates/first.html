@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <style>
+        body {
+            margin: 0%;
+            background: #161B22;
+
+        }
+
+        header {
+            height: 80px;
+            display: flex;
+            background: #0D1117;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo {
+            height: 75px;
+            width: auto;
+            top: 2.5px;
+
+        }
+
+        .btn {
+            color: blue;
+        }
+    </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #161B22;
+            font-family: Arial, sans-serif;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: calc(100vh - 80px);
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 180px;
+            
+        }
+
+        .python-logo {
+            width: 600px;
+            height: auto;
+        }
+
+        form {
+            width: 380px;
+            padding: 35px;
+            background: #1C2128;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        form h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        form label {
+            color: #d1d5db;
+            font-size: 16px;
+        }
+
+        form input {
+            width: 100%;
+            height: 42px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            background: #2D333B;
+            color: white;
+            border: 1px solid #444C56;
+            border-radius: 6px;
+            padding-left: 10px;
+            box-sizing: border-box;
+        }
+
+        form input::placeholder {
+            color: #8B949E;
+        }
+
+        .submit {
+            background: #238636;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .submit:hover {
+            background: #2EA043;
+        }
+
+        form p {
+            color: #d1d5db;
+            text-align: center;
+        }
+
+        form a {
+            color: #58A6FF;
+            text-decoration: none;
+        }
+
+        form a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            height: 80px;
+            background: #0D1117;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 25px;
+        }
+
+        .leftheader {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+        }
+
+        h2 {
+            color: white;
+            margin-left: 10px;
+        }
+
+        .rightheader a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .btn {
+            background: rgb(24, 125, 9);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="leftheader">
+            <img class="logo" src="https://seeklogo.com/images/D/django-logo-4C5ECF7036-seeklogo.com.png">
+            <h2>Django Blog</h2>
+        </div>
+
+        <div class="rightheader">
+            <a href="#">Contact</a>
+            <a href="#">Resources</a>
+            <a href="#">About</a>
+            <button class="btn">Login</button>
+        </div>
+
+    </header>
+    <main>
+        <main>
+            <main>
+                <div class="content">
+
+                    <img class="python-logo" src="https://www.svgrepo.com/show/376344/python.svg">
+
+                    <form>
+                        <h2>Register</h2>
+
+                        <label>Username</label><br>
+                        <input type="text" name="new_username" placeholder="Create Username"><br><br>
+
+                        <label>Password</label><br>
+                        <input type="password" name="new_password" placeholder="Create Password"><br><br>
+
+                        <input type="submit" value="Register" class="submit">
+
+                        <p>
+                            Already have an account?
+                            <a href="#">Login</a>
+                        </p>
+                    </form>
+
+                </div>
+            </main>
+        </main>
+    </main>
+
+</body>
+
+</html>
