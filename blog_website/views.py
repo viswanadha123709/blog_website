@@ -1,15 +1,16 @@
-from django.shortcuts import render,redirect
-from django.contrib.auth import authenticate,login
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
 
-# Create your views here.
-def login(request):
-    if request.method=='POST':
-        userid=request.POST.get("userid")
-        password=request.POST.get("password")
-        user=authenticate(request,username=userid,password=password)
-        if user is not None:
-            login(request, user)
-            return redirect("home")
+def register(request):
+    if request.method == "POST":
+        username = request.POST.get("new_username")
+        password = request.POST.get("new_password")
 
+        User.objects.create_user(
+            username=username,
+            password=password
+        )
 
-        
+        return redirect("login")
+
+    return render(request, "first.html")
