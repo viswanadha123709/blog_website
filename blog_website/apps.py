@@ -1,6 +1,5 @@
 from django.apps import AppConfig
 
-
-class BikeloginConfig(AppConfig):
+class BlogWebsiteConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'bikelogin'
+    name = 'blog_website'   

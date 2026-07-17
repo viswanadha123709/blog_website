@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block header %}
+<a href="{% url 'register' %}" class="btn">register</a>
+{% endblock %}
+
+{% block content %}
+
+<form method="POST">
+    {% csrf_token %}
+
+    <h2>Login</h2>
+
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" placeholder="Enter Username" required>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Enter Password" required>
+
+    <input type="submit" value="Login">
+
+    <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+
+</form>
+
+{% endblock %}

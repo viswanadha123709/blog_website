@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
-    <style>
-        body {
-            margin: 0%;
-            background: #161B22;
-
-        }
-
-        header {
-            height: 80px;
-            display: flex;
-            background: #0D1117;
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo {
-            height: 75px;
-            width: auto;
-            top: 2.5px;
-
-        }
-
-        .btn {
-            color: blue;
-        }
-    </style>
-</head>
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -59,7 +25,7 @@
             display: flex;
             align-items: center;
             gap: 180px;
-            
+
         }
 
         .python-logo {
@@ -149,7 +115,7 @@
             object-fit: cover;
         }
 
-        h2 {
+        .leftheader h2 {
             color: white;
             margin-left: 10px;
         }
@@ -171,6 +137,10 @@
         .btn:hover {
             background: darkblue;
         }
+
+        
+
+
     </style>
 </head>
 
@@ -187,37 +157,25 @@
             <a href="#">Contact</a>
             <a href="#">Resources</a>
             <a href="#">About</a>
+            {% block header %}
             <button class="btn">Login</button>
+            {% endblock %}
         </div>
 
     </header>
     <main>
-        <main>
-            <main>
-                <div class="content">
 
-                    <img class="python-logo" src="https://www.svgrepo.com/show/376344/python.svg">
 
-                    <form>
-                        <h2>Register</h2>
+        <div class="content">
 
-                        <label>Username</label><br>
-                        <input type="text" name="new_username" placeholder="Create Username"><br><br>
+            <img class="python-logo" src="https://www.svgrepo.com/show/376344/python.svg">
 
-                        <label>Password</label><br>
-                        <input type="password" name="new_password" placeholder="Create Password"><br><br>
+            {% block content %}
+            {% endblock %}
 
-                        <input type="submit" value="Register" class="submit">
+        </div>
 
-                        <p>
-                            Already have an account?
-                            <a href="#">Login</a>
-                        </p>
-                    </form>
 
-                </div>
-            </main>
-        </main>
     </main>
 
 </body>
