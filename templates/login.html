@@ -5,7 +5,22 @@
 {% endblock %}
 
 {% block content %}
-
+<style>
+    .login-btn {
+        width: 100%;
+        height: 42px;
+        margin-top: 8px;
+        margin-bottom: 20px;
+        background: #2D333B;
+        color: white;
+        border: 1px solid #444C56;
+        border-radius: 6px;
+        padding-left: 10px;
+        box-sizing: border-box;
+        cursor: pointer;
+        background-color: rgb(24, 125, 9);
+    }
+</style>
 <form method="POST">
     {% csrf_token %}
 
@@ -17,7 +32,7 @@
     <label for="password">Password</label>
     <input type="password" id="password" name="password" placeholder="Enter Password" required>
 
-    <input type="submit" value="Login">
+    <input type="submit" class="login-btn" value="Login">
 
     <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
 

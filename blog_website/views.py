@@ -17,17 +17,25 @@ def register(request):
     return render(request, "register.html")
 
 def login(request):
-    if request.method=="POST":
-        username=request.POST.get("username")
-        password=request.POST.get("password")
-        user=authenticate(request,username=username,password=password)
-        if user is not None:
-            authlogin(request, user)
-            return redirect("home")
+    if request.method == "POST":
+        username = request.POST.get("username")
+        password = request.POST.get("password")
+
+        user = credentials.objects.filter(
+            name=username,
+            password=password
+        ).first()
+
+        if user:
+            return redirect("main")
         else:
-            return render(request, "login.html", {"error": "Invalid Username or Password"})
+            return render(request, "login.html", {
+                "error": "Invalid Username or Password"
+            })
 
     return render(request, "login.html")
-
 def main(request):
     return render(request,"main.html")
+
+def publish(request):
+    return render(request,"publish.html")
